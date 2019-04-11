@@ -57,6 +57,20 @@ bob.shapeColor = color(189, 70, 102, 50)
 ```
 A negyedik szám a szín "láthatóságát" szabályozó, úgynevezett _alpha_ beállítás. Ez is 0 és 255 között mozog, ahol a 0 a teljesen átlátszó (tehát láthatatlan) és a 255 a teljesen látható (ami amúgy is az alapértelmezés).  
 
+## Sprite képének megváltoztatása
+1. Keress egy kepet a Googlen es masold ki a cimet
+
+<img height="400" src='img/screenshot1.png'>
+
+2. Csinalj egy uj valtozot es toltsd be a kepet
+```
+image = loadImage("a kep cimet masold ide")
+```
+3. Add hozza a spriteodhoz a kepet
+```
+bob.addImage(image)
+```
+
 ## Sprite-gyűlés
 Próbáld ki a sprite-os parancsokat itt: http://jsbin.com/weduva/edit?console,output  
 Közben figyeld, mi történik a kivetítőn.  
