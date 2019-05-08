@@ -10,9 +10,21 @@ Vegyétek a teknős programot az egyes csoportból. Adjatok hozzá négy sprite-
 
 __Lökő__  
 Hozzatok létre két sprite-ot. Az egyik indoljon az `(x: 0, y: 100)` pontból, a másik pedig az`(x: width / 2, y: height - 100)` pontból. A felső kapjon a program indulásakor fix, egy egységnyi sebességet jobbra (`EAST`), a másik pedig kattintásra kapjon három egységnyi sebességet felfelé (`NORTH`). A feladat, hogy az alsó sprite megfelelő indításával eltaláld a felsőt. Írjátok bele azt is, hogy az alsó sprite találkozáskor eltolja a felsőt.  
-(Kereshettek hozzájuk képet is: pl. az elsónak egy angry bird madarat, a felsőnek pedig angry birdös malacot; vagy az alsónak egy kutyát, a felsőnek egy labdát; vagy amit szeretnétek.)  
+(Kereshettek hozzájuk képet is: pl. az elsónak egy angry bird madarat, a felsőnek pedig angry birdös malacot; vagy az alsónak egy kutyát, a felsőnek egy labdát; vagy amit szeretnétek.)
+```
+function preload() {
+    img1 = loadImage("https://i.imgur.com/YrpZ9mR.png")
+    img2 = loadImage("https://i.imgur.com/3eDgwVt.png")
+}
+```
 
 __Cookie monster__  
 Hozzatok létre két sprite-ot: az egyik lesz a süti, a másik a cookie monster. A süti induljon az `(x: 100, y: height / 2)` pontból; a cookie monster legyen az `(x: width - 100, y: height / 2)` pontban. Kattintásra a süti kapjon 2 egységnyi sebességet jobbra (`EAST`). Írjátok meg, hogy a süti "ütközzön" a cookie monsterrel, tehát ne tudjon átmenni rajta.  
 Ha ez megvan, jön a játék: a süti ne `y: height / 2` magasságból induljon, hanem teljesen véletlenszerű magasságból. Ahhoz, hogy mégis a cookie monsterhez jusson, nektek kell majd odairányítani, mégpedig úgy, hogy létrehoztok egy harmadik sprite-ot is, ami mindig követi az egeret, és ami el tudja tolni a sütit. Így indulás után az egeret követő sprite-tal feljebb vagy lejjebb tudjátok tolni a sütit, hogy a cookie monsterhez jusson.  
 (Ha marad rá idő, keressetek hozzá képeket is.)  
+```
+function preload() {
+    img1 = loadImage("https://i.imgur.com/Tt0C7wI.png")
+    img2 = loadImage("https://i.imgur.com/XGzZIkS.png")
+}
+```

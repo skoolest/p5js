@@ -25,23 +25,23 @@ function setup() {
     man = createSprite()
     wall = createSprite()
     box = createSprite()
-    
+
     wall.position.x = random(0, width)
     wall.position.y = random(0, height)
-    
+
     box.position.x = random(0, width)
     box.position.y = random(0, height)
 }
 
 function draw() {
     background("white")
-    
+
     man.position.x = mouseX
     man.position.y = mouseY
-    
+
     man.collide(wall)
     man.displace(box)
-    
+
     allSprites.draw()
 }
 ```
@@ -52,11 +52,29 @@ Itt ki is tudod próbálni: http://jsbin.com/subokut/edit?js,output
 
 __Dózer__  
 Hozz létre egy sprite-ot a vászon bal szélén (függőlegesen középen), egyet pedig a vászon legközepén. A bal oldali sprite lesz a dózer ("bulldozer"), a középső a téli álmot alvó medve ("sleeping bear"). A medve sajnos pont az építkezési terület közepén alszik, el kell őt szállítani - ez lesz a dózer feladata. Írd meg, hogy a dózer-sprite újra meg újra jobbra mozduljon egy kicsit. Ha ez megvan, akkor a dózer-sprite sajnos csak áthajt a medvén, és nem mozdítja meg azt - az eltoláshoz a `draw` blokkba bele kell írnod, hogy a dózer-sprite "áthelyezze", eltolja a medvét.    
-(Ha van kedved, keress hozzájuk képeket is.)    
+(Ha van kedved, keress hozzájuk képeket is.)
+```
+function preload() {
+    img1 = loadImage("https://i.imgur.com/dx0cRl0.png")
+    img2 = loadImage("https://i.imgur.com/pgv5pzz.png")
+}
+```
 
 __Jóétvágy__  
 Hozz létre egy sprite-ot a vászon tetején, vízszintesen véletlenszerű helyen, és egy másik a vászon legközepén. A felső sprite lesz a hamburger, az alsó a tányér ("plate"). Aztán újra meg újra fesd fehérre a vásznat, és mozdíts a hamburger-sprite-ot lefelé egy kicsit. Azt is írd meg, hogy a tányér-sprite vízszintes helyzete mindig az egér vízszintes helyzetéhez igazodjon. A játék az, hogy a tányérral "el kell kapni" a leeső hamburgert. Ezt úgy tudod megtenni, hogy a `draw` blokkban a hamburgert "ütközteted" a tányérral.  
-(Ha van kedved, keress hozzájuk képeket is.)  
+(Ha van kedved, keress hozzájuk képeket is.)
+```
+function preload() {
+    img1 = loadImage("https://i.imgur.com/T7LI23M.png")
+    img2 = loadImage("https://i.imgur.com/vEba8no.png")
+}
+```
 
 __Vámpír__  
 Hozz létre egy sprite-ot, és keress neki egy vámpír-képet ("vampire", esestleg "dracula"). Hozz létre még egy sprite-ot, aminek egy fokhagyma a képe ("garlic"). A vámpír-sprite a vászon közepén jöjjön létre, a fokhagyma pedig újra meg újra (tehát a `draw` blokkban) vegye fel az egér aktuális helyét. Írd bele azt is, hogy a fokhagyma-sprite-tal el lehessen tolni a vámpír-sprite-ot.   
+```
+function preload() {
+    img1 = loadImage("https://i.imgur.com/Uu7hZld.png")
+    img2 = loadImage("https://i.imgur.com/GEdybVX.png")
+}
+```
